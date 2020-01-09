@@ -3,7 +3,8 @@
 
 <head>
 	<meta charset='utf8'>
-	<meta name='viewport' content='width=device-width'>
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
 	<title>Coyote</title>
 
@@ -11,13 +12,52 @@
 	<link rel='stylesheet' href='global.css'>
 	<link rel='stylesheet' href='bundle.css'>
 	<link href="https://fonts.googleapis.com/css?family=Tillana&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
 	<script src='bundle.js'></script>
 	<script>
+		// 画像用配列
+		const images = [
+			'./img/start_page.png',
+			'./img/start_btn.png',
+			'./img/back.png',
+			'./img/cancel.png',
+			'./img/card_list.png',
+			'./img/character_0.png',
+			'./img/character_1.png',
+			'./img/character_2.png',
+			'./img/character_3.png',
+			'./img/character_4.png',
+			'./img/character_5.png',
+			'./img/character_6.png',
+			'./img/character_7.png',
+			'./img/common_bg.png',
+			'./img/create_btn.png',
+			'./img/create_room.png',
+			'./img/enter_room.png',
+			'./img/game_end.png',
+			'./img/game_page.png',
+			'./img/game_start.png',
+			'./img/number_frame.png',
+			'./img/ok_btn.png',
+			'./img/scream_coyote.png',
+			'./img/scream_number.png',
+			'./img/scream.png',
+			'./img/see_result.png',
+			'./img/select_room.png',
+			'./img/window.png'
+		];
+
+		for (i = 0; i < images.length; i++) {
+			let img = document.createElement('img');
+			img.src = images[i];
+		}
+
 		document.body.onload = () => {
-			document.body.style.minHeight = window.innerHeight + 'px';
+			document.body.style.height = window.innerHeight + 'px';
 		}
 
 		// リサイズを停止して500ms後にbodyサイズを設定
@@ -26,7 +66,7 @@
 			clearTimeout(timeoutId);
 
 			timeoutId = setTimeout(() => {
-				document.body.style.minHeight = window.innerHeight + 'px';
+				document.body.style.height = window.innerHeight + 'px';
 			}, 500);
 		});
 	</script>
